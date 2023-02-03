@@ -36,7 +36,13 @@ functions:
     events:
       - http:
           path: /buscarTodosItems
-          method: get                   
+          method: get
+  buscarPorId:
+    handler: src/buscarPorId.handler
+    events:
+      - http:
+          path: /buscarPorId/{id}
+          method: get            
 resources:
   Resources:
     ItemTable:
