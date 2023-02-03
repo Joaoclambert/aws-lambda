@@ -9,7 +9,7 @@ async function handler(event) {
 
     try {
         const listaDeItems = await dynamodb.scan({
-            TableName: "ItemTable"
+            TableName: "MinhaTabela"
         }).promise();
 
         return {

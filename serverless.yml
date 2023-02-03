@@ -17,7 +17,7 @@ provider:
                 - dynamodb:GetItem
                 - dynamodb:Scan
               Resource:
-                - arn:aws:dynamodb:us-east-1:167880115321:table/ItemTable
+                - arn:aws:dynamodb:us-east-1:167880115321:table/MinhaTabela
 functions:
   hello:
     handler: src/hello.handler
@@ -51,10 +51,10 @@ functions:
           method: put
 resources:
   Resources:
-    ItemTable:
+    MinhaTabela:
       Type: AWS::DynamoDB::Table
       Properties:
-          TableName: ItemTable
+          TableName: MinhaTabela
           BillingMode: PAY_PER_REQUEST
           AttributeDefinitions:
             - AttributeName: id

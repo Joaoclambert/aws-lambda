@@ -7,7 +7,7 @@ async function handler(event) {
 
     try {
         const itemNoDynamo = await dynamodb.get({
-            TableName: "ItemTable",
+            TableName: "MinhaTabela",
             Key: {
                 id: event.pathParameters.id
             }
