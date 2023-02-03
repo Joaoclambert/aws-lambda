@@ -25,7 +25,12 @@ functions:
       - http:
           path: /
           method: get
-                          
+  adicionarItem:
+    handler: src/adicionarItem.handler
+    events:
+      - http:
+          path: /adicionarItem
+          method: post                       
 resources:
   Resources:
     ItemTable:
