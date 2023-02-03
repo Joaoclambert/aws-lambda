@@ -18,7 +18,14 @@ provider:
                 - dynamodb:Scan
               Resource:
                 - arn:aws:dynamodb:us-east-1:167880115321:table/ItemTable
-                
+functions:
+  hello:
+    handler: src/hello.handler
+    events:
+      - http:
+          path: /
+          method: get
+                          
 resources:
   Resources:
     ItemTable:
