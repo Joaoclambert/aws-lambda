@@ -30,7 +30,13 @@ functions:
     events:
       - http:
           path: /adicionarItem
-          method: post                       
+          method: post    
+  buscarTodosItems:
+    handler: src/buscarTodosItems.handler
+    events:
+      - http:
+          path: /buscarTodosItems
+          method: get                   
 resources:
   Resources:
     ItemTable:
