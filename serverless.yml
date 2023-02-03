@@ -42,7 +42,13 @@ functions:
     events:
       - http:
           path: /buscarPorId/{id}
-          method: get            
+          method: get
+  atualizarItem:
+    handler: src/atualizarItem.handler
+    events:
+      - http:
+          path: /atualizarItem/{id}
+          method: put
 resources:
   Resources:
     ItemTable:
